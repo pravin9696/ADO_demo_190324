@@ -71,5 +71,10 @@ namespace ADO_demo_190324
             }
             con.Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
