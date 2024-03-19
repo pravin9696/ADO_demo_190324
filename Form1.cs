@@ -45,5 +45,31 @@ namespace ADO_demo_190324
             }
             con.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+            string qry = "delete tblStudent where roll="+textBox1.Text;
+
+            //step1
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=DB_130324_ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = qry;
+            cmd.CommandType = CommandType.Text;
+
+            int n = cmd.ExecuteNonQuery();
+            if (n > 0)
+            {
+                MessageBox.Show("Record Deleted  successfully....");
+            }
+            else
+            {
+                MessageBox.Show("Record not Deleted!!!!");
+            }
+            con.Close();
+        }
     }
 }
