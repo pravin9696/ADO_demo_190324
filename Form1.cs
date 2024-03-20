@@ -76,5 +76,64 @@ namespace ADO_demo_190324
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int roll = int.Parse(textBox1.Text);
+            string name = textBox2.Text;
+            int contact = Convert.ToInt32(textBox3.Text);
+
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=DB_130324_ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "sp_insert_student";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@roll", roll);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@contact", contact);
+
+            int n = cmd.ExecuteNonQuery();
+            if (n>0)
+            {
+                MessageBox.Show("Record inserted successfully...");
+            }
+            else
+            {
+                MessageBox.Show("Record not inserted!!!!");
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int roll = int.Parse(textBox1.Text);
+            string name = textBox2.Text;
+            int contact = Convert.ToInt32(textBox3.Text);
+
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=DB_130324_ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "sp_update_student";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@roll", roll);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@contact", contact);
+
+            int n = cmd.ExecuteNonQuery();
+            if (n > 0)
+            {
+                MessageBox.Show("Record updated successfully...");
+            }
+            else
+            {
+                MessageBox.Show("Record not updated!!!!");
+            }
+        }
     }
 }
