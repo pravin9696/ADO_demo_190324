@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEmpId = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.txtEmpId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.listDesignation = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.listDesignation = new System.Windows.Forms.ListBox();
+            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,23 +71,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Emp Basic Information";
             // 
-            // label1
+            // radioButton2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Emp Id";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(238, 140);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(95, 29);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Female";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // txtEmpId
+            // radioButton1
             // 
-            this.txtEmpId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpId.Location = new System.Drawing.Point(144, 29);
-            this.txtEmpId.Name = "txtEmpId";
-            this.txtEmpId.Size = new System.Drawing.Size(265, 30);
-            this.txtEmpId.TabIndex = 1;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(130, 140);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 29);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Male";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Gender";
             // 
             // txtEmpName
             // 
@@ -105,39 +123,23 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
-            // label3
+            // txtEmpId
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Gender";
+            this.txtEmpId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpId.Location = new System.Drawing.Point(144, 29);
+            this.txtEmpId.Name = "txtEmpId";
+            this.txtEmpId.Size = new System.Drawing.Size(265, 30);
+            this.txtEmpId.TabIndex = 1;
             // 
-            // radioButton1
+            // label1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(130, 140);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 29);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(238, 140);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 29);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Emp Id";
             // 
             // groupBox2
             // 
@@ -154,30 +156,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Office Information";
             // 
-            // label4
+            // listDesignation
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Department";
+            this.listDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listDesignation.FormattingEnabled = true;
+            this.listDesignation.ItemHeight = 25;
+            this.listDesignation.Items.AddRange(new object[] {
+            "Sales Person",
+            "Sr. Clerk",
+            "Developer",
+            "HR"});
+            this.listDesignation.Location = new System.Drawing.Point(141, 136);
+            this.listDesignation.Name = "listDesignation";
+            this.listDesignation.Size = new System.Drawing.Size(265, 79);
+            this.listDesignation.TabIndex = 8;
             // 
-            // cmbDept
+            // label6
             // 
-            this.cmbDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDept.FormattingEnabled = true;
-            this.cmbDept.Items.AddRange(new object[] {
-            "Sales",
-            "HR",
-            "Account",
-            "Production",
-            "Development"});
-            this.cmbDept.Location = new System.Drawing.Point(141, 39);
-            this.cmbDept.Name = "cmbDept";
-            this.cmbDept.Size = new System.Drawing.Size(265, 33);
-            this.cmbDept.TabIndex = 4;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 151);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 25);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Designation";
             // 
             // txtSalary
             // 
@@ -197,62 +199,55 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Salary";
             // 
-            // label6
+            // cmbDept
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 151);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Designation";
+            this.cmbDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDept.FormattingEnabled = true;
+            this.cmbDept.Items.AddRange(new object[] {
+            "Sales",
+            "HR",
+            "Account",
+            "Production",
+            "Development"});
+            this.cmbDept.Location = new System.Drawing.Point(141, 39);
+            this.cmbDept.Name = "cmbDept";
+            this.cmbDept.Size = new System.Drawing.Size(265, 33);
+            this.cmbDept.TabIndex = 4;
             // 
-            // listDesignation
+            // label4
             // 
-            this.listDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listDesignation.FormattingEnabled = true;
-            this.listDesignation.ItemHeight = 25;
-            this.listDesignation.Items.AddRange(new object[] {
-            "Sales Person",
-            "Sr. Clerk",
-            "Developer",
-            "HR"});
-            this.listDesignation.Location = new System.Drawing.Point(141, 136);
-            this.listDesignation.Name = "listDesignation";
-            this.listDesignation.Size = new System.Drawing.Size(265, 79);
-            this.listDesignation.TabIndex = 8;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Department";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.Controls.Add(this.btnUpdate);
             this.groupBox3.Controls.Add(this.btnInsert);
-            this.groupBox3.Location = new System.Drawing.Point(29, 419);
+            this.groupBox3.Location = new System.Drawing.Point(29, 413);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(441, 96);
+            this.groupBox3.Size = new System.Drawing.Size(749, 96);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // btnInsert
+            // btnSearch
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(6, 19);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(104, 57);
-            this.btnInsert.TabIndex = 0;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(113, 19);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(104, 57);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(332, 19);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(104, 57);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search Employee";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -264,21 +259,54 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnSearch
+            // btnUpdate
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(332, 19);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 57);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search Employee";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(113, 19);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(104, 57);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(6, 19);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(104, 57);
+            this.btnInsert.TabIndex = 0;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(442, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 57);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Search using Joins";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(594, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 57);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Search using SP";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EmpRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 527);
+            this.ClientSize = new System.Drawing.Size(893, 527);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -315,5 +343,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
