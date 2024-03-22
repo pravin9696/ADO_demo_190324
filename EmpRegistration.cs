@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Automation;
 
 namespace ADO_demo_190324
 {
@@ -228,6 +229,96 @@ namespace ADO_demo_190324
             else
             {
                 MessageBox.Show("Employee information not available!!!!");
+            }
+
+            con.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtEmpName.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+
+            cmbDept.ResetText();
+            txtSalary.Text = "";
+            listDesignation.ResetText();
+
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=DB_130324_ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "  select * from tblEmp_info ei inner join tblEmp_office_details eod on ei.empid=eod.empid  where ei.empid=" + txtEmpId.Text.Trim();
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataReader rdr= cmd.ExecuteReader();
+            if (rdr.Read())//true
+            {
+                txtEmpName.Text = rdr["name"].ToString();
+                if (rdr["gender"].ToString()=="Male")
+                {
+                    radioButton1.Checked = true;
+                }
+                else
+                {
+                    radioButton2.Checked = true;
+                }
+
+                cmbDept.SelectedText = rdr["dept"].ToString();           
+                txtSalary.Text = rdr["Salary"].ToString();
+                listDesignation.SelectedValue = rdr["Designation"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Record not available!!!!!");
+            }
+
+            con.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtEmpName.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+
+            cmbDept.ResetText();
+            txtSalary.Text = "";
+            listDesignation.SelectedItem = null;
+
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=DB_130324_ADO;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "sp_select_emp_join_new";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@empid",txtEmpId.Text);
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+            if (rdr.Read())//true
+            {
+                txtEmpName.Text = rdr["name"].ToString();
+                if (rdr["gender"].ToString() == "Male")
+                {
+                    radioButton1.Checked = true;
+                }
+                else
+                {
+                    radioButton2.Checked = true;
+                }
+
+                cmbDept.SelectedText = rdr["dept"].ToString();
+                txtSalary.Text = rdr["Salary"].ToString();
+
+               string designation = rdr["Designation"].ToString();
+                listDesignation.SelectedItem = designation;
+
+            }
+            else
+            {
+                MessageBox.Show("Record not available!!!!!");
             }
 
             con.Close();
